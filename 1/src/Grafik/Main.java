@@ -20,10 +20,10 @@ public class Main {
 		connect.init();
 		
 		JFrame frame = new JFrame("table");
-		frame.setSize(new Dimension(600, 400));
+		frame.setSize(new Dimension(800, 600));
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLocationRelativeTo(null);
-		frame.setLayout(new GridBagLayout());
+		frame.getContentPane().setLayout(new GridBagLayout());
 		
 		JButton addButton = new JButton("add");
 		JButton delButton = new JButton("delete");
@@ -47,14 +47,14 @@ public class Main {
 		
 		*/
 		
-		frame.add(tableScroll, new GridBagConstraints(0, 0, 3, 1, 1, 1, GridBagConstraints.NORTH, GridBagConstraints.BOTH, new Insets(1, 1, 1, 1), 0, 0));
+		frame.getContentPane().add(tableScroll, new GridBagConstraints(0, 0, 3, 1, 1, 1, GridBagConstraints.CENTER, GridBagConstraints.BOTH, new Insets(1, 1, 1, 1), 0, 0));
 		
-		frame.add(addButton, new GridBagConstraints(0, 1, 1, 1, 1, 1, GridBagConstraints.NORTH, GridBagConstraints.BOTH, new Insets(1, 1, 1, 1), 0, 0));
-		frame.add(delButton, new GridBagConstraints(1, 1, 1, 1, 1, 1, GridBagConstraints.NORTH, GridBagConstraints.BOTH, new Insets(1, 1, 1, 1), 0, 0));
-		frame.add(clearButton, new GridBagConstraints(2, 1, 1, 1, 1, 1, GridBagConstraints.NORTH, GridBagConstraints.BOTH, new Insets(1, 1, 1, 1), 0, 0));
+		frame.getContentPane().add(addButton, new GridBagConstraints(0, 1, 1, 1, 1, 1, GridBagConstraints.NORTH, GridBagConstraints.BOTH, new Insets(1, 1, 1, 1), 0, 0));
+		frame.getContentPane().add(delButton, new GridBagConstraints(1, 1, 1, 1, 1, 1, GridBagConstraints.NORTH, GridBagConstraints.BOTH, new Insets(1, 1, 1, 1), 0, 0));
+		frame.getContentPane().add(clearButton, new GridBagConstraints(2, 1, 1, 1, 1, 1, GridBagConstraints.NORTH, GridBagConstraints.BOTH, new Insets(1, 1, 1, 1), 0, 0));
 		
 		frame.setVisible(true);
-		frame.pack();
+		//frame.pack();
 		
 		/*
 		ConnectionDB connect = new ConnectionDB("localhost", "SYSDBA", "masterkey", "c:/DB/GRAFIK.fdb");
